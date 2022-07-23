@@ -3,6 +3,7 @@ import shutil
 path = "C:\\Users\\Acer\\Desktop\\9730034\\emailProject\\src\\main\\java\\com\\emailProject\\emailProject\\service"
 outPath = "C:\\Users\\Acer\\Desktop\\9730034\\emailProject\\src\\test\\java\\com\\emailProject"
 
+
 # find pubic methods in a file and return the names
 def find_public_methods_names(lines, filename):
     methodNames = []
@@ -56,8 +57,6 @@ def createSuiteClass(outFilePath, suiteName):
     f.write("public class " +str(suiteName) + "ITSuite" + "{}")
     pass
 
-
-
 if __name__ == '__main__':
     file_Text_dict = {}
     for filename in os.listdir(path):
@@ -69,6 +68,11 @@ if __name__ == '__main__':
            outFilePath = create_new_File(publicMethodNames, filename)
            createSuiteClass(outFilePath, filename)
            print(publicMethodNames)
+
+
+
+
+
 
 
 
